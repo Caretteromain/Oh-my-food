@@ -1,3 +1,29 @@
+/*ANIMATION CHARGEMENT PAGE*/
+@keyframes transition {
+  0% {
+    margin-top: -10px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.box {
+  animation: transition 2s ease-in-out 0.01s, opacity 2s ease-in-out 0.01s;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
 h3 {
   border-bottom: 3px solid #99e2d0;
   display: flex;
@@ -21,6 +47,13 @@ h2 {
   font-size: 30px;
 }
 
+.restaurantpicture {
+  height: 273px;
+  width: 100%;
+  background-size: cover;
+  background-image: url(./MaquettesOhmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
 img {
   display: flex;
   width: 100%;
@@ -42,7 +75,7 @@ section {
   background-color: rgb(245, 245, 245);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  z-index: 1;
+  margin-top: -65px;
 }
 
 .sectiontitle {
@@ -136,15 +169,58 @@ section {
   transform: scale(1.1);
 }
 
+/* COEUR */
+#heart1 {
+  color: whitesmoke;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+#heart1:hover {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+  transform: scale(1.2);
+  color: #ff79da;
+  -webkit-text-stroke-color: #ff79da;
+  cursor: pointer;
+}
+
+/* ANIMATION MENU */
+.fa-check-circle {
+  border: 1px solid #99e2d0;
+  padding: 29.5px;
+  background-color: #99e2d0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 25px;
+  color: white;
+}
+
+.menucheck {
+  margin-right: -10px;
+}
+
+.menucheck:hover {
+  display: unset;
+}
+
 /*FOOTER*/
 footer {
   color: white;
   background-color: rgb(32 30 30 / 94%);
 }
 
+.footersection {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 220px;
+}
+
 #h2footer {
   font-family: "Shrikhand", sans-serif;
   color: white;
+  padding-top: 20px;
 }
 
 .footercolumn {
@@ -156,48 +232,68 @@ footer {
 
 .listfooter {
   color: white;
+  margin-bottom: 10px;
 }
 
 .footerparagraph {
   color: white;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.fa-utensils {
+  margin-right: 12px;
+}
+
+.fa-hands-helping {
+  margin-right: 5px;
 }
 
 /* RESPONSIVE */
-/* Nouvelles règles si la fenêtre fait moins de 768px */
-@media screen and (max-width: 768px) {
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
   .box {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .menubox {
-    width: 95%;
-    margin: 10px auto;
+    width: 30%;
   }
 
-  .boxstarter {
-    flex-direction: column;
-}
-
-.menuboxstarter {
-    width: 95%;
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 425px */
-@media screen and (max-width: 425px) {
   h3 {
-    width: 14%;
+    width: 3%;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 768px */
+@media screen and (min-width: 768px) {
+  h3 {
+    width: 4%;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
+  h3 {
+    width: 2%;
   }
 
-  .title {
-    font-size: 15px;
+  @keyframes transition {
+    0% {
+      margin-top: -10px;
+      margin-left: auto;
+    }
   }
-
-  #subtitlerestaurant {
-    font-size: 25px;
-  }
-
-  .commandbutton {
-    width: 50%;
+  @keyframes opacity {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
   }
 }

@@ -5,6 +5,7 @@
 
 body {
   width: 100%;
+  margin: 0;
 }
 
 h2 {
@@ -57,6 +58,8 @@ p {
 #Restaurantsubtitle {
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
+  width: 80%;
+  text-align: center;
 }
 
 .button {
@@ -76,6 +79,11 @@ p {
   transform: scale(1.1);
 }
 
+#MenusubtittleH2 {
+  width: 65%;
+  text-align: center;
+}
+
 /*SECTION FILTER*/
 
 .imageandnew {
@@ -86,22 +94,24 @@ p {
 
 .new {
   position: absolute;
-  top: 16%;
-  left: 90%;
+
   transform: translate(-50%, -50%);
   border: 1px solid #99e2d0;
   background-color: #99e2d0;
   padding: 10px 15px;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
+  color: green;
+  top: 20%;
+  left: 84%;
 }
 
 .Filterchoice {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
 }
 
 .BoxFilter {
@@ -112,6 +122,7 @@ p {
 
 .boxfilterparagraph {
   font-weight: bold;
+  margin-left: 25px;
 }
 
 .Filter {
@@ -121,11 +132,13 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: flex-start;
 }
 
 .Filter:hover {
@@ -134,8 +147,8 @@ p {
 }
 
 .iconefilter {
-  margin-right: 30px;
   color: gray;
+  margin-left: 20px;
 }
 
 .numberfilter {
@@ -152,6 +165,11 @@ p {
   position: absolute;
   margin-left: -10px;
 }
+
+.Mainh2 {
+  margin-left: 40px;
+}
+
 /*SECTION FONCTIONNEMENT*/
 
 /*SECTION RESTAURANTS*/
@@ -160,14 +178,14 @@ p {
   width: 95%;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .blocrestaurants {
   border-radius: 12px;
-  width: 49%;
+  width: 100%;
   box-shadow: 0px 0px 19px 0px rgba(224, 220, 220, 0.938);
   margin-top: 30px;
 }
@@ -197,22 +215,24 @@ p {
   cursor: pointer;
 }
 
-#heart1:hover {
-    display: none;
-}
-
-#heart2 {
-    display: none;
-}
-
-#heart2:hover {
-    visibility: visible;
-    color: pink;
-}
-
 .Localisationrestaurant {
   font-weight: lighter;
   color: black;
+}
+
+#heart1 {
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+#heart1:hover {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+  transform: scale(1.2);
+  color: #ff79da;
+  -webkit-text-stroke-color: #ff79da;
 }
 
 /*FOOTER*/
@@ -259,68 +279,57 @@ footer {
   margin-right: 5px;
 }
 
-
-
 /* RESPONSIVE */
+/* Nouvelles règles si la fenêtre fait moins de 320px */
+@media screen and (min-width: 320px) {
+  .new {
+    transform: translate(-60%, -50%);
+  }
+}
+
 /* Nouvelles règles si la fenêtre fait moins de 768px */
-@media screen and (max-width: 768px) {
-  .Filterchoice {
-    flex-direction: column;
+@media screen and (min-width: 768px) {
+  .numberfilter {
+    margin-left: 0px;
   }
 
-  .Filter {
-    width: 90%;
-    margin: 10px auto;
-    justify-content: flex-start;
+  .new {
+    transform: translate(0%, -50%);
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1024px */
+@media screen and (min-width: 1024px) {
+  .numberfilter {
+    margin-left: 10px;
+  }
+
+  .new {
+    transform: translate(40%, -50%);
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
+  .numberfilter {
+    margin-left: 25px;
   }
 
   .mainrestaurant {
-    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .blocrestaurants {
-    width: 95%;
-    margin: 15px auto;
-  }
-
-  .restaurantsimages {
-    height: 150px;
-  }
-
-  .filter {
-    width: 80%;
-    margin: 10px auto;
+    border-radius: 12px;
+    width: 49%;
   }
 
   .new {
-    top: 20%;
-    left: 90%;
+    transform: translate(-10%, -50%);
   }
-
-  .iconefilter {
-    margin-left: 20px;
-  }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 425px */
-@media screen and (max-width: 425px) {
-  .new {
-    top: 20%;
-    left: 84%;
-  }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 375px */
-@media screen and (max-width: 375px) {
-  .new {
-    top: 20%;
-    left: 82%;
-  }
-
-  /* Nouvelles règles si la fenêtre fait moins de 320px */
-@media screen and (max-width: 320px) {
-    .new {
-      top: 20%;
-      left: 79%;
-    }
 }

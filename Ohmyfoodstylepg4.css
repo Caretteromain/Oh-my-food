@@ -1,7 +1,33 @@
+/*ANIMATION CHARGEMENT PAGE*/
+@keyframes transition {
+  0% {
+    margin-top: -10px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.box {
+  animation: transition 2s ease-in-out 0.01s, opacity 2s ease-in-out 0.01s;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
 h3 {
   border-bottom: 3px solid #99e2d0;
   display: flex;
-  width: 3%;
+  width: 14%;
   font-family: "Roboto", sans-serif;
   padding-bottom: 5px;
   font-weight: lighter;
@@ -18,7 +44,14 @@ h2 {
   align-items: center;
   justify-content: space-between;
   font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
+  font-size: 15px;
+}
+
+.restaurantpicture {
+  height: 273px;
+  width: 100%;
+  background-size: cover;
+  background-image: url(./MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 
 img {
@@ -42,7 +75,7 @@ section {
   background-color: rgb(245, 245, 245);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  z-index: 1;
+  margin-top: -65px;
 }
 
 .sectiontitle {
@@ -57,11 +90,12 @@ section {
 
 #subtitlerestaurant {
   font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
 }
 
 .box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .menubox {
@@ -69,9 +103,9 @@ section {
   display: flex;
   flex-direction: row;
   border-radius: 12px;
-  width: 30%;
-  margin: 0 auto;
   box-shadow: 5px 15px 20px -3px rgb(224 220 220);
+  width: 95%;
+  margin: 10px auto;
 }
 
 .menuboxcontain {
@@ -82,6 +116,7 @@ section {
   margin: 0 auto;
   width: 95%;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
 .price {
@@ -102,9 +137,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
   margin: 50px auto;
   padding: 30px;
+  width: 50%;
 }
 
 .Command {
@@ -119,6 +154,42 @@ section {
   transition-property: transform;
   transition-duration: 400ms;
   transform: scale(1.1);
+}
+
+/* COEUR */
+#heart1 {
+  color: whitesmoke;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+#heart1:hover {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+  transform: scale(1.2);
+  color: #ff79da;
+  -webkit-text-stroke-color: #ff79da;
+  cursor: pointer;
+}
+
+/* ANIMATION MENU */
+.fa-check-circle {
+  border: 1px solid #99e2d0;
+  padding: 29.5px;
+  background-color: #99e2d0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 25px;
+  color: white;
+}
+
+.menucheck {
+  margin-right: -10px;
+}
+
+.menucheck:hover {
+  display: unset;
 }
 
 /*FOOTER*/
@@ -154,6 +225,7 @@ footer {
 .footerparagraph {
   color: white;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .fa-utensils {
@@ -165,34 +237,50 @@ footer {
 }
 
 /* RESPONSIVE */
-/* Nouvelles règles si la fenêtre fait moins de 768px */
-@media screen and (max-width: 768px) {
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
   .box {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .menubox {
-    width: 95%;
-    margin: 10px auto;
+    width: 30%;
+  }
+
+  h3 {
+    width: 3%;
   }
 }
 
-/* Nouvelles règles si la fenêtre fait moins de 425px */
-@media screen and (max-width: 425px) {
+/* Nouvelles règles si la fenêtre fait moins de 768px */
+@media screen and (min-width: 768px) {
   h3 {
-    width: 14%;
+    width: 4%;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
+  h3 {
+    width: 2%;
   }
 
-  .title {
-    font-size: 15px;
+  @keyframes transition {
+    0% {
+      margin-top: -10px;
+      margin-left: auto;
+    }
   }
-
-  #subtitlerestaurant {
-    font-size: 25px;
-  }
-
-  .commandbutton {
-    width: 50%;
+  @keyframes opacity {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
   }
 }
