@@ -45,6 +45,7 @@ p {
 #localisation {
   margin-left: 20px;
   font-weight: lighter;
+  font-size: 20px;
 }
 
 .Menusubtitle {
@@ -60,28 +61,31 @@ p {
   font-weight: lighter;
   width: 80%;
   text-align: center;
+  margin-top: -3px;
 }
 
 .button {
-  border: 1px solid white;
   border-radius: 40px;
-  padding: 20px;
+  padding: 15px;
+  font-size: 18px;
   background: linear-gradient(#ff79da, #9356dc);
   color: white;
   font-family: "Roboto", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  box-shadow: 0px 3px 8px 3px rgba(178, 180, 179, 0.959);
 }
 
 .button:hover {
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 400ms;
-  transform: scale(1.1);
+  filter: brightness(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 #MenusubtittleH2 {
   width: 65%;
   text-align: center;
+  margin-top: 35px;
 }
 
 /*SECTION FILTER*/
@@ -98,12 +102,12 @@ p {
   transform: translate(-50%, -50%);
   border: 1px solid #99e2d0;
   background-color: #99e2d0;
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-family: "Roboto", sans-serif;
-  border-radius: 5px;
+  border-radius: 3px;
   color: green;
   top: 20%;
-  left: 84%;
+  right: -10%;
 }
 
 .Filterchoice {
@@ -144,6 +148,10 @@ p {
 .Filter:hover {
   background: #9256dc50;
   cursor: pointer;
+}
+
+.Filter:hover .iconefilter {
+  color: #9356dc;
 }
 
 .iconefilter {
@@ -189,6 +197,11 @@ p {
   box-shadow: 0px 0px 19px 0px rgba(224, 220, 220, 0.938);
   margin-top: 30px;
 }
+
+.blocrestaurants:hover {
+  filter: brightness(1.1);
+}
+
 .restaurantsimages {
   height: 200px;
   width: 100%;
@@ -196,6 +209,7 @@ p {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   box-shadow: 0px 0px 19px 0px rgba(224, 220, 220, 0.938);
+  object-position: 0px -64px;
 }
 
 .test {
@@ -207,11 +221,15 @@ p {
   border-radius: 12px;
 }
 
+.Localisationrestaurant {
+  margin-top: -15px;
+}
+
 /*HEART*/
 .logoheart {
   display: flex;
   align-items: center;
-  font-size: 35px;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -227,10 +245,8 @@ p {
 }
 
 #heart1:hover {
-  transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
-  transform: scale(1.2);
   color: #ff79da;
   -webkit-text-stroke-color: #ff79da;
 }

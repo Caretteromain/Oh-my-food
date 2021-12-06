@@ -140,6 +140,7 @@ section {
   margin: 50px auto;
   padding: 30px;
   width: 50%;
+  cursor: pointer;
 }
 
 .Command {

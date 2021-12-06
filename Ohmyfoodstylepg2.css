@@ -1,10 +1,10 @@
 /*ANIMATION CHARGEMENT PAGE*/
 @keyframes transition {
   0% {
-    margin-top: -10px;
+    margin-top: 0px;
   }
   100% {
-    margin-left: 0;
+    margin-top: -20px;
   }
 }
 @keyframes opacity {
@@ -16,7 +16,7 @@
   }
 }
 .box {
-  animation: transition 2s ease-in-out 0.01s, opacity 2s ease-in-out 0.01s;
+  animation: transition 1.5s ease-in-out 0.1s, opacity 2s ease-in-out 0.1s;
 }
 
 body {
@@ -129,7 +129,6 @@ section {
 }
 
 .commandbutton {
-  border: 1px solid white;
   border-radius: 40px;
   padding: 20px;
   background: linear-gradient(#ff79da, #9356dc);
@@ -138,8 +137,8 @@ section {
   align-items: center;
   justify-content: center;
   margin: 50px auto;
-  padding: 30px;
-  width: 50%;
+  width: 45%;
+  cursor: pointer;
 }
 
 .Command {
@@ -150,10 +149,9 @@ section {
 }
 
 .commandbutton:hover {
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 400ms;
-  transform: scale(1.1);
+  filter: brightness(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 /* COEUR */
@@ -174,29 +172,43 @@ section {
 }
 
 /* ANIMATION MENU */
+
 .fa-check-circle {
-  border: 1px solid #99e2d0;
   padding: 29.5px;
   background-color: #99e2d0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   font-size: 25px;
   color: white;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .menucheck {
-  margin-right: -10px;
+  position: relative;
+  right: -11px;
+  background-color: #99e2d0;
+  width: 1px;
+  height: 86px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
-div.menucheck {
-  display: none;
+.menubox:hover .menucheck {
+  transition-duration: 1.5s;
+  flex-grow: 0.5;
+  flex-basis: 1px;
 }
 
-div.menuboxcontain:hover .menucheck {
-  display: block;
-  transform: translate(-10px, 0px);
-  transition: 10s;
+.menubox:hover .fa-check-circle {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  transition-duration: 1.5s;
 }
+
+transform: translateX(-80px);
+transition-duration: 1.5s;
 
 /*FOOTER*/
 footer {

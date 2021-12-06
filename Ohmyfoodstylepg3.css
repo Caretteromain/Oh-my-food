@@ -153,6 +153,7 @@ section {
   width: 20%;
   margin: 50px auto;
   padding: 30px;
+  cursor: pointer;
 }
 
 .Command {
