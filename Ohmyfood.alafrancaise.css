@@ -1,22 +1,24 @@
 /*ANIMATION CHARGEMENT PAGE*/
 @keyframes transition {
   0% {
-    margin-top: 0px;
+    margin-top: 50px;
   }
+
   100% {
-    margin-top: -20px;
+    margin-top: 0px;
   }
 }
 @keyframes opacity {
   0% {
     opacity: 0%;
   }
+
   100% {
     opacity: 100%;
   }
 }
 .box {
-  animation: transition 1.5s ease-in-out 0.1s, opacity 2s ease-in-out 0.1s;
+  animation: transition 3s ease-in-out 0.1s, opacity 3s ease-in-out 0.1s;
 }
 
 body {
@@ -51,7 +53,7 @@ h2 {
   height: 273px;
   width: 100%;
   background-size: cover;
-  background-image: url(./MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url(./MaquettesOhmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 
 img {
@@ -70,12 +72,18 @@ img {
   margin-left: 20px;
 }
 
+.fa-arrow-left:hover {
+  -webkit-transform: scale(1.25);
+}
+
 /* SECTION */
 section {
   background-color: rgb(245, 245, 245);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin-top: -65px;
+  padding-bottom: 30px;
+  margin-bottom: -20px;
 }
 
 .sectiontitle {
@@ -106,6 +114,7 @@ section {
   box-shadow: 5px 15px 20px -3px rgb(224 220 220);
   width: 95%;
   margin: 10px auto;
+  transition: all 2s;
 }
 
 .menuboxcontain {
@@ -119,9 +128,13 @@ section {
   cursor: pointer;
 }
 
+.Menuposition {
+  display: flex;
+  align-items: flex-end;
+}
+
 .price {
   font-weight: bold;
-  margin-right: 10px;
 }
 
 .nameplate {
@@ -157,18 +170,18 @@ section {
 /* COEUR */
 #heart1 {
   color: whitesmoke;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  margin-right: 15px;
 }
 
 #heart1:hover {
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 400ms;
-  transform: scale(1.2);
-  color: #ff79da;
-  -webkit-text-stroke-color: #ff79da;
+  transition-duration: 0.8s;
+  -webkit-text-stroke-color: #9256dc;
   cursor: pointer;
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ANIMATION MENU */
@@ -189,26 +202,35 @@ section {
   position: relative;
   right: -11px;
   background-color: #99e2d0;
-  width: 1px;
+  width: 0px;
   height: 86px;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+  overflow: hidden;
+  transition: all 1.5s;
 }
 
 .menubox:hover .menucheck {
-  transition-duration: 1.5s;
-  flex-grow: 0.5;
+  transition: all 2s;
+  flex-grow: 0.9;
   flex-basis: 1px;
 }
 
 .menubox:hover .fa-check-circle {
-  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
-  transition-duration: 1.5s;
+  transition: all 2s;
 }
 
-transform: translateX(-80px);
-transition-duration: 1.5s;
+.left {
+  flex-shrink: 1;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.right {
+  flex-shrink: 0;
+}
 
 /*FOOTER*/
 footer {
