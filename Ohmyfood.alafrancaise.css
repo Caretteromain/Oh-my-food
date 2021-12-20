@@ -1,24 +1,56 @@
-/*ANIMATION CHARGEMENT PAGE*/
-@keyframes transition {
+/*ANIMATION OUVERTURE DE PAGE*/
+@keyframes mon_anim1 {
   0% {
-    margin-top: 50px;
+    transform: translateY(2vh);
+    opacity: 0;
   }
-
   100% {
-    margin-top: 0px;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
-@keyframes opacity {
-  0% {
-    opacity: 0%;
-  }
+.anim1 {
+  animation-name: mon_anim1;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
 
+  animation-iteration-count: 1;
+}
+
+@keyframes mon_anim2 {
+  0% {
+    transform: translateY(2vh);
+    opacity: 0;
+  }
   100% {
-    opacity: 100%;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
-.box {
-  animation: transition 3s ease-in-out 0.1s, opacity 3s ease-in-out 0.1s;
+.anim2 {
+  animation-name: mon_anim2;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: 1;
+}
+
+@keyframes mon_anim3 {
+  0% {
+    transform: translateY(2vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.anim3 {
+  animation-name: mon_anim3;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: 1;
 }
 
 body {
@@ -177,7 +209,7 @@ section {
 
 #heart1:hover {
   transition-duration: 0.8s;
-  -webkit-text-stroke-color: #9256dc;
+  -webkit-text-stroke-color: transparent;
   cursor: pointer;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;

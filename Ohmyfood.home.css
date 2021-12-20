@@ -23,7 +23,7 @@ p {
 
 section {
   padding-top: 30px;
-  margin-top: 80px;
+  padding-bottom: 70px;
 }
 
 /*HEADER*/
@@ -265,8 +265,8 @@ section {
 }
 
 #heart1:hover {
-  transition-duration: 0.5s;
-  -webkit-text-stroke-color: #9256dc;
+  transition-duration: 0.2s;
+  -webkit-text-stroke-color: transparent;
   cursor: pointer;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -320,76 +320,10 @@ footer {
 
 /* RESPONSIVE */
 /* Nouvelles règles si la fenêtre fait moins de 320px */
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   .new {
     transform: translate(-60%, -50%);
   }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 768px */
-@media screen and (min-width: 768px) {
-  .numberfilter {
-    margin-left: 0px;
-  }
-
-  .new {
-    transform: translate(-100%, -50%);
-  }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 1024px */
-@media screen and (min-width: 1024px) {
-  .numberfilter {
-    margin-left: 10px;
-  }
-
-  .new {
-    transform: translate(-135%, -50%);
-  }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 1440px */
-@media screen and (min-width: 1440px) {
-  .numberfilter {
-    margin-left: 25px;
-  }
-
-  .mainrestaurant {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .blocrestaurants {
-    border-radius: 12px;
-    width: 49%;
-  }
-
-  .new {
-    transform: translate(-10%, -50%);
-  }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 375px */
-@media screen and (min-width: 375px) {
-  .restaurantsimages {
-    height: 165px;
-  }
-
-  #lanoteenchantepicture {
-    object-position: 0px -165px;
-  }
-
-  .new {
-    transform: translate(-60%, -35%);
-  }
-}
-
-/* Nouvelles règles si la fenêtre fait moins de 320px */
-@media screen and (min-width: 320px) {
   .new {
     transform: translate(-60%, -50%);
   }
@@ -411,5 +345,207 @@ footer {
 
   .Filter {
     padding-left: 20px;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 375px */
+@media screen and (min-width: 375px) {
+  .restaurantsimages {
+    height: 165px;
+  }
+
+  #lanoteenchantepicture {
+    object-position: 0px -160px;
+  }
+
+  .new {
+    transform: translate(-60%, -35%);
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 425px */
+@media screen and (min-width: 425px) {
+  #lanoteenchantepicture {
+    object-position: 0px -190px;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 768px */
+@media screen and (min-width: 768px) {
+  .numberfilter {
+    margin-left: 0px;
+  }
+
+  .new {
+    transform: translate(-100%, -50%);
+  }
+
+  .restaurantsimages {
+    height: 180px;
+    object-position: 0px -180px;
+  }
+
+  #lanoteenchantepicture {
+    object-position: 0px -380px;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1024px */
+@media screen and (min-width: 1024px) {
+  .numberfilter {
+    margin-left: 10px;
+  }
+
+  .restaurantsimages {
+    object-position: 0px -98px;
+    height: 200px;
+  }
+
+  #lanoteenchantepicture {
+    object-position: 0px -220px;
+  }
+
+  .new {
+    transform: translate(-75%, -40%);
+  }
+
+  .mainrestaurant {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .blocrestaurants {
+    border-radius: 12px;
+    width: 49%;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
+  .numberfilter {
+    margin-left: 30px;
+  }
+
+  .mainrestaurant {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .blocrestaurants {
+    border-radius: 12px;
+    width: 49%;
+  }
+
+  .new {
+    transform: translate(-95%, -40%);
+  }
+
+  .restaurantsimages {
+    object-position: 0px -160px;
+    height: 250px;
+  }
+
+  #lanoteenchantepicture {
+    object-position: 0px -325px;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 2560px */
+@media screen and (min-width: 2560px) {
+  section {
+    padding-top: 30px;
+    margin-top: 20px;
+  }
+
+  .numberfilter {
+    margin-left: -20px;
+    padding: 15px;
+    border-radius: 25px;
+  }
+
+  .new {
+    transform: translate(-145%, -40%);
+  }
+
+  .Mainh2 {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .button {
+    padding: 35px;
+  }
+  .Filterchoice {
+    width: 85%;
+    flex-direction: initial;
+    margin-bottom: 80px;
+  }
+
+  .Filter {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .mainrestaurant {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .Restaurants {
+    padding-bottom: 180px;
+  }
+
+  .restaurantsimages {
+    height: 350px;
+    object-position: 0px -255px;
+  }
+
+  #lanoteenchantepicture {
+    object-position: 0px -495px;
+  }
+
+  .blocrestaurants {
+    border-radius: 12px;
+    width: 45%;
+  }
+
+  .footersection {
+    height: 335px;
+  }
+
+  .footercolumn {
+    font-size: 30px;
+  }
+
+  #h2footer {
+    font-size: 50px;
+  }
+
+  .listfooter {
+    margin-bottom: 20px;
+  }
+
+  .footercolumn {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  .footersection {
+    height: 255px;
+    margin-top: -35px;
   }
 }

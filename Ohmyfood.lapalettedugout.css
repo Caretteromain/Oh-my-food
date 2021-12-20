@@ -1,24 +1,56 @@
-/*ANIMATION CHARGEMENT PAGE*/
-@keyframes transition {
+/*ANIMATION OUVERTURE DE PAGE*/
+@keyframes mon_anim1 {
   0% {
-    margin-top: 50px;
+    transform: translateY(2vh);
+    opacity: 0;
   }
-
   100% {
-    margin-top: 0px;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
-@keyframes opacity {
-  0% {
-    opacity: 0%;
-  }
+.anim1 {
+  animation-name: mon_anim1;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
 
+  animation-iteration-count: 1;
+}
+
+@keyframes mon_anim2 {
+  0% {
+    transform: translateY(2vh);
+    opacity: 0;
+  }
   100% {
-    opacity: 100%;
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
-.box {
-  animation: transition 3s ease-in-out 0.1s, opacity 3s ease-in-out 0.1s;
+.anim2 {
+  animation-name: mon_anim2;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: 1;
+}
+
+@keyframes mon_anim3 {
+  0% {
+    transform: translateY(2vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.anim3 {
+  animation-name: mon_anim3;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: 1;
 }
 
 body {
@@ -176,8 +208,8 @@ section {
 }
 
 #heart1:hover {
-  transition-duration: 0.8s;
-  -webkit-text-stroke-color: #9256dc;
+  transition-duration: 0.4s;
+  -webkit-text-stroke-color: transparent;
   cursor: pointer;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -212,8 +244,8 @@ section {
 
 .menubox:hover .menucheck {
   transition: all 2s;
-  flex-grow: 0.9;
-  flex-basis: 1px;
+  flex-grow: 1.8;
+  text-overflow: ellipsis;
 }
 
 .menubox:hover .fa-check-circle {
@@ -222,14 +254,19 @@ section {
 }
 
 .left {
+  display: flex;
+}
+
+.plateprecision {
   flex-shrink: 1;
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.right {
-  flex-shrink: 0;
+
+.price {
+  flex-grow: 0;
 }
 
 /*FOOTER*/
@@ -277,22 +314,10 @@ footer {
 }
 
 /* RESPONSIVE */
-/* Nouvelles règles si la fenêtre fait moins de 1440px */
-@media screen and (min-width: 1440px) {
-  .box {
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .menubox {
-    width: 30%;
-  }
-
-  h3 {
-    width: 3%;
+/* Nouvelles règles si la fenêtre fait moins de 320px */
+@media screen and (max-width: 320px) {
+  .restaurantpicture {
+    background-position: -45px 0px;
   }
 }
 
@@ -301,26 +326,56 @@ footer {
   h3 {
     width: 4%;
   }
+
+  .restaurantpicture {
+    height: 450px;
+  }
 }
 
-/* Nouvelles règles si la fenêtre fait moins de 1440px */
-@media screen and (min-width: 1440px) {
-  h3 {
-    width: 2%;
+/* Nouvelles règles si la fenêtre fait moins de 1024px */
+@media screen and (min-width: 1024px) {
+  .restaurantpicture {
+    height: 550px;
   }
 
-  @keyframes transition {
-    0% {
-      margin-top: -10px;
-      margin-left: auto;
+  .menubox:hover .menucheck {
+    transition: all 2s;
+    flex-grow: 0.13;
+  }
+
+  .menucheck {
+    right: -24px;
+  }
+
+  /* Nouvelles règles si la fenêtre fait moins de 1440px */
+  @media screen and (min-width: 1440px) {
+    .box {
+      flex-direction: row;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .menubox {
+      width: 30%;
+    }
+
+    h3 {
+      width: 2%;
+    }
+
+    .restaurantpicture {
+      height: 650px;
+      background-position: 0px -115px;
     }
   }
-  @keyframes opacity {
-    0% {
-      opacity: 0%;
-    }
-    100% {
-      opacity: 100%;
+
+  /* Nouvelles règles si la fenêtre fait moins de 2560px */
+  @media screen and (min-width: 2560px) {
+    .restaurantpicture {
+      height: 850px;
+      background-position: 0px -400px;
     }
   }
 }
