@@ -163,6 +163,7 @@ section {
 .Menuposition {
   display: flex;
   align-items: flex-end;
+  flex-grow: 1;
 }
 
 .price {
@@ -240,11 +241,12 @@ section {
   border-bottom-right-radius: 12px;
   overflow: hidden;
   transition: all 1.5s;
+  flex-grow: 0;
 }
 
 .menubox:hover .menucheck {
   transition: all 2s;
-  flex-grow: 0.9;
+  flex-grow: 0.2;
   flex-basis: 1px;
 }
 
@@ -253,15 +255,8 @@ section {
   transition: all 2s;
 }
 
-.left {
-  flex-shrink: 1;
-  flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.right {
-  flex-shrink: 0;
+.menubox:hover .Menuposition {
+  flex-grow: 0.8;
 }
 
 /*FOOTER*/

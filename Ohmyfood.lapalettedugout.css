@@ -163,6 +163,11 @@ section {
 .Menuposition {
   display: flex;
   align-items: flex-end;
+  flex-grow: 1.2;
+}
+
+.menucheck {
+  flex-grow: 0;
 }
 
 .price {
@@ -244,7 +249,7 @@ section {
 
 .menubox:hover .menucheck {
   transition: all 2s;
-  flex-grow: 1.8;
+  flex-grow: 8;
   text-overflow: ellipsis;
 }
 
@@ -253,20 +258,53 @@ section {
   transition: all 2s;
 }
 
-.left {
-  display: flex;
+.menuanim1 {
+  flex-grow: 2;
 }
 
-.plateprecision {
+.menuanim2 {
+  flex-grow: 1;
+}
+
+.menuanim3 {
+  flex-grow: 1;
+}
+
+.menuanim4 {
+  flex-grow: 1;
+}
+
+.menuanim5 {
+  flex-grow: 1;
+}
+
+.menuanim6 {
+  flex-grow: 3.1;
+}
+
+.menuanim7 {
+  flex-grow: 3.5;
+}
+
+.menuanim8 {
+  flex-grow: 0.4;
+}
+
+.menuanim9 {
+  flex-grow: 0.4;
+}
+
+.menubox:hover .plateprecision {
   flex-shrink: 1;
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 80%;
 }
 
-.price {
-  flex-grow: 0;
+.menubox:hover .price {
+  flex-shrink: 0;
 }
 
 /*FOOTER*/
@@ -330,6 +368,50 @@ footer {
   .restaurantpicture {
     height: 450px;
   }
+
+  .menucheck {
+    right: -19px;
+  }
+
+  .menubox:hover .menucheck {
+    flex-grow: 0.4;
+  }
+
+  .menuanim1 {
+    flex-grow: 2;
+  }
+
+  .menuanim2 {
+    flex-grow: 1.8;
+  }
+
+  .menuanim3 {
+    flex-grow: 1.5;
+  }
+
+  .menuanim4 {
+    flex-grow: 1.3;
+  }
+
+  .menuanim5 {
+    flex-grow: 1.5;
+  }
+
+  .menuanim6 {
+    flex-grow: 2.3;
+  }
+
+  .menuanim7 {
+    flex-grow: 2.3;
+  }
+
+  .menuanim8 {
+    flex-grow: 1.6;
+  }
+
+  .menuanim9 {
+    flex-grow: 1.5;
+  }
 }
 
 /* Nouvelles règles si la fenêtre fait moins de 1024px */
@@ -347,35 +429,181 @@ footer {
     right: -24px;
   }
 
-  /* Nouvelles règles si la fenêtre fait moins de 1440px */
-  @media screen and (min-width: 1440px) {
-    .box {
-      flex-direction: row;
-      width: 90%;
-      margin: 0 auto;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .menubox {
-      width: 30%;
-    }
-
-    h3 {
-      width: 2%;
-    }
-
-    .restaurantpicture {
-      height: 650px;
-      background-position: 0px -115px;
-    }
+  .menuanim1 {
+    flex-grow: 1;
   }
 
-  /* Nouvelles règles si la fenêtre fait moins de 2560px */
-  @media screen and (min-width: 2560px) {
-    .restaurantpicture {
-      height: 850px;
-      background-position: 0px -400px;
-    }
+  .menuanim2 {
+    flex-grow: 1;
+  }
+
+  .menuanim3 {
+    flex-grow: 1;
+  }
+
+  .menuanim4 {
+    flex-grow: 1;
+  }
+
+  .menuanim5 {
+    flex-grow: 1;
+  }
+
+  .menuanim6 {
+    flex-grow: 1.1;
+  }
+
+  .menuanim7 {
+    flex-grow: 1.1;
+  }
+
+  .menuanim8 {
+    flex-grow: 1;
+  }
+
+  .menuanim9 {
+    flex-grow: 1.1;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 1440px */
+@media screen and (min-width: 1440px) {
+  .box {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .menucheck {
+    right: -16px;
+  }
+
+  .menubox {
+    width: 50%;
+  }
+
+  h3 {
+    width: 2%;
+  }
+
+  .restaurantpicture {
+    height: 650px;
+    background-position: 0px -115px;
+  }
+
+  .menubox:hover .menucheck {
+    flex-grow: 0.4;
+  }
+
+  .menuanim2 {
+    flex-grow: 1.8;
+  }
+
+  .menuanim3 {
+    flex-grow: 1.5;
+  }
+
+  .menuanim4 {
+    flex-grow: 1.3;
+  }
+
+  .menuanim5 {
+    flex-grow: 1.5;
+  }
+
+  .menuanim6 {
+    flex-grow: 2.3;
+  }
+
+  .menuanim7 {
+    flex-grow: 2.3;
+  }
+
+  .menuanim8 {
+    flex-grow: 0.6;
+  }
+
+  .menuanim9 {
+    flex-grow: 1.5;
+  }
+
+  .menubox:hover .menucheck {
+    flex-grow: 0.25;
+  }
+}
+
+/* Nouvelles règles si la fenêtre fait moins de 2560px */
+@media screen and (min-width: 2560px) {
+  .restaurantpicture {
+    height: 850px;
+    background-position: 0px -400px;
+  }
+
+  #returnarrow {
+    font-size: 40px;
+  }
+
+  #subtitlerestaurant {
+    font-size: 50px;
+  }
+
+  section {
+    margin-bottom: -35px;
+  }
+
+  .sectiontitle {
+    font-size: 70px;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-left: 715px;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .menucheck {
+    height: 133px;
+    right: -29px;
+  }
+
+  .menubox {
+    width: 50%;
+  }
+
+  .fa-check-circle {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menuboxcontain {
+    font-size: 25px;
+  }
+
+  .commandbutton {
+    padding: 35px;
+    font-size: 25px;
+    margin: 96px auto;
+  }
+
+  .footercolumn {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 95%;
+    font-size: 20px;
+    margin: auto;
+  }
+
+  #h2footer {
+    font-size: 50px;
+  }
+
+  .menuanim8 {
+    flex-grow: 1.7;
   }
 }
