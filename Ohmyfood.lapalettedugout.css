@@ -249,7 +249,7 @@ section {
 
 .menubox:hover .menucheck {
   transition: all 2s;
-  flex-grow: 8;
+  flex-grow: 10;
   text-overflow: ellipsis;
 }
 
@@ -259,11 +259,11 @@ section {
 }
 
 .menuanim1 {
-  flex-grow: 2;
+  flex-grow: 12.5;
 }
 
 .menuanim2 {
-  flex-grow: 1;
+  flex-grow: 6.6;
 }
 
 .menuanim3 {
@@ -279,28 +279,55 @@ section {
 }
 
 .menuanim6 {
-  flex-grow: 3.1;
+  flex-grow: 17;
 }
 
 .menuanim7 {
-  flex-grow: 3.5;
+  flex-grow: 19.5;
 }
 
 .menuanim8 {
-  flex-grow: 0.4;
+  flex-grow: 2.5;
 }
 
 .menuanim9 {
-  flex-grow: 0.4;
+  flex-grow: 1;
 }
 
-.menubox:hover .plateprecision {
+.menubox:hover .plateprecision3 {
   flex-shrink: 1;
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 80%;
+  width: 85%;
+}
+
+.menubox:hover .plateprecision4 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+}
+
+.menubox:hover .plateprecision5 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+}
+
+.menubox:hover .plateprecision9 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
 }
 
 .menubox:hover .price {
@@ -356,6 +383,68 @@ footer {
 @media screen and (max-width: 320px) {
   .restaurantpicture {
     background-position: -45px 0px;
+  }
+}
+
+/* RESPONSIVE */
+/* Nouvelles règles si la fenêtre fait moins de 375px */
+@media screen and (max-width: 375px) {
+  .menubox:hover .menucheck {
+    flex-grow: 4;
+  }
+
+  .menuanim1 {
+    flex-grow: 3.7;
+  }
+
+  .menuanim2 {
+    flex-grow: 1;
+  }
+
+  .menubox:hover .plateprecision2 {
+    flex-shrink: 1;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75%;
+  }
+
+  .menuanim3 {
+    flex-grow: 1;
+  }
+
+  .menubox:hover .plateprecision3 {
+    flex-shrink: 1;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 55%;
+  }
+
+  .menuanim4 {
+    flex-grow: 1.3;
+  }
+
+  .menuanim5 {
+    flex-grow: 1.5;
+  }
+
+  .menuanim6 {
+    flex-grow: 1.6;
+  }
+
+  .menuanim7 {
+    flex-grow: 1.9;
+  }
+
+  .menuanim8 {
+    flex-grow: 1.6;
+  }
+
+  .menuanim9 {
+    flex-grow: 1.5;
   }
 }
 
@@ -420,49 +509,57 @@ footer {
     height: 550px;
   }
 
+  .menucheck {
+    right: -8px;
+  }
+
   .menubox:hover .menucheck {
     transition: all 2s;
     flex-grow: 0.13;
   }
 
-  .menucheck {
-    right: -24px;
+  .menuboxcontain {
+    width: 98%;
+  }
+
+  .menubox:hover .menucheck {
+    flex-grow: 0.2;
   }
 
   .menuanim1 {
-    flex-grow: 1;
+    flex-grow: 1.6;
   }
 
   .menuanim2 {
-    flex-grow: 1;
+    flex-grow: 1.5;
   }
 
   .menuanim3 {
-    flex-grow: 1;
+    flex-grow: 1.4;
   }
 
   .menuanim4 {
-    flex-grow: 1;
+    flex-grow: 1.3;
   }
 
   .menuanim5 {
-    flex-grow: 1;
+    flex-grow: 1.3;
   }
 
   .menuanim6 {
-    flex-grow: 1.1;
+    flex-grow: 1.7;
   }
 
   .menuanim7 {
-    flex-grow: 1.1;
+    flex-grow: 1.8;
   }
 
   .menuanim8 {
-    flex-grow: 1;
+    flex-grow: 1.4;
   }
 
   .menuanim9 {
-    flex-grow: 1.1;
+    flex-grow: 1.3;
   }
 }
 
@@ -477,7 +574,7 @@ footer {
   }
 
   .menucheck {
-    right: -16px;
+    right: -9px;
   }
 
   .menubox {
@@ -497,40 +594,40 @@ footer {
     flex-grow: 0.4;
   }
 
-  .menuanim2 {
+  .menuanim1 {
     flex-grow: 1.8;
   }
 
-  .menuanim3 {
+  .menuanim2 {
     flex-grow: 1.5;
+  }
+
+  .menuanim3 {
+    flex-grow: 1.2;
   }
 
   .menuanim4 {
-    flex-grow: 1.3;
+    flex-grow: 1.1;
   }
 
   .menuanim5 {
-    flex-grow: 1.5;
+    flex-grow: 1.2;
   }
 
   .menuanim6 {
-    flex-grow: 2.3;
+    flex-grow: 2;
   }
 
   .menuanim7 {
-    flex-grow: 2.3;
+    flex-grow: 2;
   }
 
   .menuanim8 {
-    flex-grow: 0.6;
+    flex-grow: 1.3;
   }
 
   .menuanim9 {
-    flex-grow: 1.5;
-  }
-
-  .menubox:hover .menucheck {
-    flex-grow: 0.25;
+    flex-grow: 1.2;
   }
 }
 
@@ -568,7 +665,7 @@ footer {
 
   .menucheck {
     height: 133px;
-    right: -29px;
+    right: -12px;
   }
 
   .menubox {
@@ -603,7 +700,16 @@ footer {
     font-size: 50px;
   }
 
+  .fa-check-circle {
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+
+  .menuanim6 {
+    flex-grow: 1.9;
+  }
+
   .menuanim8 {
-    flex-grow: 1.7;
+    flex-grow: 1.3;
   }
 }
